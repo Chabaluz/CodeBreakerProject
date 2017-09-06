@@ -5,12 +5,12 @@ function guess() {
     let input = document.getElementById('user-guess');
     //add functionality to guess function here
     
-    if (answer === '' || attempt === '') {
+    if (answer.value === '' || attempt.value === '') {
         setHiddenFields();
     }
 
     if (validateInput(input.value)) {
-        attempt++;
+        attempt.value++;
     } else {
         return false;
     }
@@ -41,8 +41,8 @@ function setHiddenFields() {
         random = "0" + random;
     }
 
-    answer = random;
-    attempt = 0;
+    answer.value = random;
+    attempt.value = 0;
 }
 
 function setMessage(input) {
@@ -65,10 +65,10 @@ function getResults(input) {
         + '</span><div class="col-md-6">';
 
     for (i = 0; i < input.length; i++) {
-        if (input[i] === answer[i]) {
+        if (input[i] === answer.value[i]) {
             results += '<span class="glyphicon glyphicon-ok"></span>';
             correctCount++;
-        } else if (answer.includes(input[i])) {
+        } else if (answer.value.includes(input[i])) {
             results += '<span class="glyphicon glyphicon-transfer"></span>';
         } else {
             results += '<span class="glyphicon glyphicon-remove"></span>';
