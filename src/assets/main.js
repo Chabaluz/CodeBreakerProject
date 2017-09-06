@@ -19,7 +19,7 @@ function guess() {
         setMessage("You Win! :)");
         showAnswer(true);
         showReplay();
-    } else if (attempt > 9) {
+    } else if (attempt.value > 9) {
         setMessage("You Lose! :(");
         showAnswer(false);
         showReplay();
