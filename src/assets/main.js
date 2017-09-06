@@ -16,15 +16,15 @@ function guess() {
     }
 
     if (getResults(input.value)) {
-        setMessage("Winner!");
+        setMessage("You Win! :)");
         showAnswer(true);
         showReplay();
     } else if (attempt > 9) {
-        setMessage("Loser!");
+        setMessage("You Lose! :(");
         showAnswer(false);
         showReplay();
     } else {
-        setMessage("Incorrect, try again!");
+        setMessage("Incorrect, try again.");
     }
 
 }
